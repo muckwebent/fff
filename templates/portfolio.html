@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<body class="pricing-page">
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Pricing</li>
+          </ol>
+        </nav>
+        <h1>Pricing</h1>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing section">
+      <div class="container" data-aos="zoom-in" data-aos-delay="100">
+
+        <!-- Pricing Items -->
+        <div class="row g-4">
+
+          <div class="col-lg-12">
+            <img style="width: 100%; height: auto; display: block; margin: 0 auto;" src="{% static 'assets/img/ml.png' %}" alt="implementation">
+          </div><!-- End Image Column -->
+
+          <div class="col-lg-12">
+            <div class="container">
+              <h2>First Fruit Family Fund (FFF)</h2>
+
+              <section>
+                <h3>Program Overview</h3>
+                <ul>
+                  <li>The Grants are jointly provided by members to assist fellow human beings.</li>
+                  <li>Free involvement available at every location of our mission centers internationally.</li>
+                  <li>Resulted from more than 15 years of investment, research, and training.</li>
+                  <li>Believe in helping others and be willing to accept help from others.</li>
+                  <li>Minimum required investment and willingness to invest it with a purpose.</li>
+                </ul>
+              </section>
+
+              <section>
+                <h3>Guidelines and Requirements</h3>
+                <ul>
+                  <li>Investment maturity period using the power of imagination.</li>
+                  <li>Power of creating wealth with unlimited people contributing to your wealth.</li>
+                  <li>Assistance to break financial chains without harming others.</li>
+                  <li>Channeling capital/grants for your investment to fulfill life dreams.</li>
+                </ul>
+              </section>
+
+              <section>
+                <h3>Program Policies</h3>
+                <ul>
+                  <li>Form collection and submission process.</li>
+                  <li>Strict confidentiality and non-transferability of forms.</li>
+                  <li>Notification and identification/claim papers collection within specified timelines.</li>
+                  <li>Investment commitment and forfeiture policy for non-compliance.</li>
+                </ul>
+              </section>
+
+              <section>
+                <h3>Additional Information</h3>
+                <ul>
+                  <li>This program is not a lottery and does not have any spiritual implications or commitments other than assisting fellow human beings.</li>
+                </ul>
+              </section>
+
+            </div><!-- End Inner Container -->
+          </div><!-- End Pricing Item Column -->
+
+        </div><!-- End Row -->
+
+      </div><!-- End Container -->
+    </section><!-- End Pricing Section -->
+
+  </main>
+
+</body>
+</html>
+
+{% endblock content %}

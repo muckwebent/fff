@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li class="current">About</li>
+          </ol>
+        </nav>
+        <h1>About</h1>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- About Section -->
+  <section id="about" class="section about">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+            <div class="col-lg-6 order-1 order-lg-2">
+                <img src="{% static 'assets/img/about.jpg' %}" class="img-fluid" alt="About First Fruit Family Fund">
+            </div>
+            <div class="col-lg-6 order-2 order-lg-1 content">
+                <h3>About First Fruit Family Fund</h3>
+                <p class="fst-italic">
+                    First Fruit Family Fund is dedicated to transforming your social network into a powerful tool for financial growth. Our platform empowers you to build connections, earn rewards, and achieve mutual success.
+                </p>
+                <ul>
+                    <li><i class="bi bi-check2-all"></i> <span><strong>Grow Your Network:</strong> Expand your connections by introducing new members and move up the levels.</span></li>
+                    <li><i class="bi bi-check2-all"></i> <span><strong>Earn and Succeed:</strong> Achieve financial growth through our structured rewards system as your network thrives.</span></li>
+                    <li><i class="bi bi-check2-all"></i> <span><strong>Access Resources:</strong> Benefit from exclusive training materials and resources to help you succeed at every level.</span></li>
+                </ul>
+                <p>
+                    Join First Fruit Family Fund today and be part of a supportive community of like-minded individuals working towards mutual success. Together, we can achieve more!
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <section id="stats" class="stats section">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item">
+                    <i class="bi bi-emoji-smile"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+                    <p><strong>Satisfied Members</strong> <span>Building their networks and achieving success</span></p>
+                </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item">
+                    <i class="bi bi-journal-richtext"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+                    <p><strong>Projects Completed</strong> <span>Empowering members with valuable resources</span></p>
+                </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item">
+                    <i class="bi bi-headset"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
+                    <p><strong>Hours of Support</strong> <span>Dedicated to member success and growth</span></p>
+                </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item">
+                    <i class="bi bi-people"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
+                    <p><strong>Team Members</strong> <span>Working tirelessly to support our community</span></p>
+                </div>
+            </div><!-- End Stats Item -->
+
+        </div>
+    </div>
+</section><!-- /Stats Section -->
+
+
+    <!-- Clients Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>Discover what our members have to say about their experience with First Fruit Family Fund.</p>
+      </div><!-- End Section Title -->
+
+
+      <div class="container">
+
+        <div class="row gy-4">
+            {% for testimony in testimony %}
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-item">
+              <img src="{{testimony.image.url}}" class="testimonial-img" alt="">
+              <h3>{{testimony.name}}</h3>
+              <h4>{{testimony.post}}</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>{{testimony.post}}</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+            {% endfor %}
+
+
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+  </main>
+
+{% endblock content %}

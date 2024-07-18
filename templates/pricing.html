@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<body class="pricing-page">
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Pricing</li>
+          </ol>
+        </nav>
+        <h1>Pricing</h1>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Pricing Section -->
+
+
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="pricing section">
+
+    <div class="container" data-aos="zoom-in" data-aos-delay="100">
+
+      <!-- Side Navigation -->
+      <div class="pricing-nav" id="pricing-nav">
+        <i class="bi bi-arrow-left"></i>
+      </div>
+
+      <!-- Pricing Items -->
+      <div class="row g-4">
+
+        <div class="col-lg-4">
+          <div class="pricing-item">
+            <h3>Starter Plan</h3>
+            <div class="icon">
+              <i class="bi bi-box"></i>
+            </div>
+            <h4><sup>N</sup>50<span> / 7 days</span></h4>
+            <ul>
+              <li><i class="bi bi-check"></i> <span>Earn N350 for bringing 5 new members within 7 days</span></li>
+              <li class="na"><i class="bi bi-x"></i> <span>Additional bonuses as your network grows</span></li>
+              <li class="na"><i class="bi bi-x"></i> <span>Grant of N1,050 after maturity period</span></li>
+            </ul>
+            <div class="text-center"><a href="#" class="buy-btn">Learn More</a></div>
+          </div>
+        </div><!-- End Pricing Item -->
+
+        <div class="col-lg-4">
+          <div class="pricing-item featured">
+            <h3>Advanced Plan</h3>
+            <div class="icon">
+              <i class="bi bi-rocket"></i>
+            </div>
+            <h4><sup>N</sup>350<span> / 7 days</span></h4>
+            <ul>
+              <li><i class="bi bi-check"></i> <span>Earn N12,250 if your initial 5 recruits each bring 5 new members</span></li>
+              <li><i class="bi bi-check"></i> <span>Grant of N10,500 when your network reaches 500 members</span></li>
+              <li class="na"><i class="bi bi-x"></i> <span>Further incentives as your network expands</span></li>
+            </ul>
+            <div class="text-center"><a href="#" class="buy-btn">Learn More</a></div>
+          </div>
+        </div><!-- End Pricing Item -->
+
+        <div class="col-lg-4">
+          <div class="pricing-item">
+            <h3>Premium Plan</h3>
+            <div class="icon">
+              <i class="bi bi-send"></i>
+            </div>
+            <h4><sup>N</sup>1,050<span> / 7 days</span></h4>
+            <ul>
+              <li><i class="bi bi-check"></i> <span>Earn N105,000 when your network grows to 50,000 members</span></li>
+              <li><i class="bi bi-check"></i> <span>Grant of N1,050,000 for achieving 1,050,000 members</span></li>
+              <li><i class="bi bi-check"></i> <span>Ultimate reward of N12,100,000 for 12,100,000 members</span></li>
+            </ul>
+            <div class="text-center"><a href="#" class="buy-btn">Learn More</a></div>
+          </div>
+        </div><!-- End Pricing Item -->
+
+      </div><!-- End Row -->
+
+    </div><!-- End Container -->
+
+  </section><!-- End Pricing Section -->
+
+  <script>
+    // Script for sliding navigation
+    const pricingNav = document.getElementById('pricing-nav');
+    const pricingSection = document.getElementById('pricing');
+
+    pricingNav.addEventListener('click', () => {
+      pricingSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  </script>
+
+</body>
+</html>
+
+
+  </main>
+
+
+{% endblock content %}

@@ -1,0 +1,195 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+        {% for features in features %}
+        {% if features.active == True %}
+
+        <div class="carousel-item active">
+          <img src="{% static 'assets/img/hero-carousel/hero-carousel-1.jpg' %}" alt="">
+          <div class="carousel-container">
+            <h2> <span>{{features.title}}</span></h2>
+            <p>{{features.details}}</p>
+              {% if user.is_authenticated %}
+
+              {% else %}
+            <a href="{% url 'sign-in' %}" class="btn-get-started">Get Started</a>
+              {% endif %}
+          </div>
+        </div>
+
+        {% else %}
+        {% endif %}
+        {% endfor %}<!-- End Carousel Item -->
+
+
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+      </div>
+
+      <div class="featured container">
+    <div class="row gy-4">
+
+        <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="featured-item position-relative">
+                <div class="icon"><i class="bi bi-people-fill icon"></i></div>
+                <h4><a href="" class="stretched-link">Grow Your Network</a></h4>
+                <p>Expand your connections and move up the levels by introducing new members to our community.</p>
+            </div>
+        </div><!-- End Featured Item -->
+
+        <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="featured-item position-relative">
+                <div class="icon"><i class="bi bi-award-fill icon"></i></div>
+                <h4><a href="" class="stretched-link">Earn and Succeed</a></h4>
+                <p>Achieve financial growth through our structured rewards system as you and your network thrive.</p>
+            </div>
+        </div><!-- End Featured Item -->
+
+        <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="featured-item position-relative">
+                <div class="icon"><i class="bi bi-journal-bookmark-fill icon"></i></div>
+                <h4><a href="" class="stretched-link">Access Resources</a></h4>
+                <p>Benefit from exclusive training materials and resources to help you succeed at every level.</p>
+            </div>
+        </div><!-- End Featured Item -->
+
+    </div>
+</div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+            <div class="col-lg-6 order-1 order-lg-2">
+                <img src="{% static 'assets/img/about.jpg' %}" class="img-fluid" alt="About First Fruit Family Fund">
+            </div>
+            <div class="col-lg-6 order-2 order-lg-1 content">
+                <h3>About First Fruit Family Fund</h3>
+                <p class="fst-italic">
+                    First Fruit Family Fund is dedicated to transforming your social network into a powerful tool for financial growth. Our platform empowers you to build connections, earn rewards, and achieve mutual success.
+                </p>
+                <ul>
+                    <li><i class="bi bi-check2-all"></i> <span><strong>Grow Your Network:</strong> Expand your connections by introducing new members and move up the levels.</span></li>
+                    <li><i class="bi bi-check2-all"></i> <span><strong>Earn and Succeed:</strong> Achieve financial growth through our structured rewards system as your network thrives.</span></li>
+                    <li><i class="bi bi-check2-all"></i> <span><strong>Access Resources:</strong> Benefit from exclusive training materials and resources to help you succeed at every level.</span></li>
+                </ul>
+                <p>
+                    Join First Fruit Family Fund today and be part of a supportive community of like-minded individuals working towards mutual success. Together, we can achieve more!
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Services Section -->
+    <section id="services" class="section services">
+    <div class="container">
+        <div class="row gy-4">
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-item position-relative">
+                    <div class="icon">
+                        <i class="bi bi-people-fill"></i>
+                    </div>
+                    <a href="#" class="stretched-link">
+                        <h3>Network Development</h3>
+                    </a>
+                    <p>Enhance your professional network by connecting with new members. Advance through our structured levels as you expand your reach and influence.</p>
+                </div>
+            </div><!-- End Service Item -->
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-item position-relative">
+                    <div class="icon">
+                        <i class="bi bi-wallet-fill"></i>
+                    </div>
+                    <a href="#" class="stretched-link">
+                        <h3>Monetary Incentives</h3>
+                    </a>
+                    <p>Earn competitive financial rewards as your network grows. Our tiered incentive structure ensures your dedication is recognized and rewarded.</p>
+                </div>
+            </div><!-- End Service Item -->
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-item position-relative">
+                    <div class="icon">
+                        <i class="bi bi-journal-richtext"></i>
+                    </div>
+                    <a href="#" class="stretched-link">
+                        <h3>Professional Development</h3>
+                    </a>
+                    <p>Access a wealth of training materials and resources designed to support your success. Our platform provides the tools you need for continuous growth.</p>
+                </div>
+            </div><!-- End Service Item -->
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="service-item position-relative">
+                    <div class="icon">
+                        <i class="bi bi-trophy-fill"></i>
+                    </div>
+                    <a href="#" class="stretched-link">
+                        <h3>Recognition Programs</h3>
+                    </a>
+                    <p>Receive accolades and rewards as you achieve milestones within our community. We celebrate your success and dedication to growth.</p>
+                </div>
+            </div><!-- End Service Item -->
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="service-item position-relative">
+                    <div class="icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <a href="#" class="stretched-link">
+                        <h3>Growth Opportunities</h3>
+                    </a>
+                    <p>Leverage new opportunities for advancement through strategic networking. Our platform fosters an environment of continuous professional development.</p>
+                </div>
+            </div><!-- End Service Item -->
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                <div class="service-item position-relative">
+                    <div class="icon">
+                        <i class="bi bi-chat-dots-fill"></i>
+                    </div>
+                    <a href="#" class="stretched-link">
+                        <h3>Community Engagement</h3>
+                    </a>
+                    <p>Engage with a supportive community of professionals. Share insights, collaborate, and receive encouragement as you pursue your goals.</p>
+                </div>
+            </div><!-- End Service Item -->
+
+        </div>
+    </div>
+</section>
+<!-- /Services Section -->
+
+    <!-- Clients Section -->
+    <section id="clients" class="section clients">
+
+      <!-- Section Title -->
+
+
+
+      </div>
+
+    </section><!-- /Clients Section -->
+
+  </main>
+
+{% endblock content %}
